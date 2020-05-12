@@ -4,5 +4,4 @@ export class CharactersService extends BaseService {
   constructor() {
     super('characters')
   }
-
 }
