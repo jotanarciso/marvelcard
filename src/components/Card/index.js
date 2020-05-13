@@ -85,11 +85,11 @@ export class Card extends React.Component {
             }}
             onClick={() => this.setState({ flip: !flip })}
           >
-            <span className="id">#{character.id}</span>
-            <h2>{character.name}</h2>
+            <span style={{display: flip && 'none'}} className="id">#{character.id}</span>
+            <h2 style={{display: flip && 'none'}}>{character.name}</h2>
             {character.specification && ( // if character has specification show specification
               <>
-                <h3>{character.specification}</h3>
+                <h3 style={{display: flip && 'none'}}>{character.specification}</h3>
               </>
             )}
           </div>
