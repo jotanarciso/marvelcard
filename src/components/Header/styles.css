@@ -2,11 +2,13 @@
   font-family: "Marvel";
   src: local("Marvel"), url(./fonts/marvel-font.ttf) format("ttf");
 }
+
 header {
   display: flex !important;
   position: absolute;
   width: 100%;
 }
+
 header h1 {
   height: 60px;
   font-size: 4em;
@@ -19,13 +21,12 @@ header h1 {
   padding-right: 6px;
   padding-left: 10px;
   cursor: pointer;
-  color: #951f23;
-  background: #fff;
+  color: #fff;
+  background: #951f23;
   transition: all 0.3s ease-in-out;
 }
+
 header h1:hover {
   color: #951f23;
   background: #fff;
-  color: #fff;
-  background: #951f23;
 }

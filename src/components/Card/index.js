@@ -2,7 +2,7 @@ import React from "react";
 import { MarvelService } from "@services";
 import { NotificationService } from "@services";
 import "./style.css";
-
+import fowardCard from './img/foward.png';
 const googleImages = async (character) => {
   const GoogleImages = require("google-images");
   const client = new GoogleImages(
@@ -28,6 +28,7 @@ export class Card extends React.Component {
     this.notificationService = new NotificationService();
     this.state = {
       character: false,
+      flip: props.flip ? props.flip : false
     };
   }
 
@@ -68,9 +69,11 @@ export class Card extends React.Component {
     }
   }
 
+
   render() {
     const { character } = this.state;
     const thumbnail = character.thumbnail;
+    const { flip } = this.state;
 
     return (
       <>
@@ -78,10 +81,9 @@ export class Card extends React.Component {
           <div
             className={character ? "card open-cards" : "card"}
             style={{
-              backgroundImage: thumbnail
-                ? 'url("' + thumbnail.src + '")'
-                : null,
+              backgroundImage: (flip ? ('url("' + fowardCard + '")') : ('url("' + thumbnail.src + '")'))
             }}
+            onClick={() => this.setState({ flip: !flip })}
           >
             <span className="id">#{character.id}</span>
             <h2>{character.name}</h2>
@@ -91,7 +93,8 @@ export class Card extends React.Component {
               </>
             )}
           </div>
-        )}
+        )
+        }
       </>
     );
   }

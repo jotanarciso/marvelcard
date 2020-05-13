@@ -46,10 +46,12 @@ export class Home extends React.Component {
     super(props);
     this.charactersService = new MarvelService();
     this.notificationService = new NotificationService();
+
     this.state = {
       characters: [],
       isLoading: true,
       inputValue: false, // character name to search
+      flip: true,
     };
   }
 
@@ -83,7 +85,10 @@ export class Home extends React.Component {
         .then(
           (response) =>
             response.data.results.length !== 0 //  if a result is found for the specific character
-              ? this.setState({ characters: response.data.results }) /// set character
+              ? this.setState({
+                  characters: response.data.results,
+                  flip: nameToSearch ? false : true, // if the card was fetched flip is false
+                }) /// set character
               : this.notificationService.error(
                   `Não foi possível encontrar o personagem! Verifique o nome e tente novamente.` // warns the user
                 ),
@@ -102,6 +107,7 @@ export class Home extends React.Component {
   render() {
     const { characters } = this.state;
     var { isLoading } = this.state;
+    var { flip } = this.state;
     return (
       <>
         <Header></Header>
@@ -125,8 +131,12 @@ export class Home extends React.Component {
               ></Search>
             </div>
             <div className="row no-gutters flex justify-content-center">
-              {characters.map((character) => (
-                <Card key={character.id} character={character}></Card>
+              {characters.map((character, key) => (
+                <Card
+                  key={character.id}
+                  character={character}
+                  flip={flip}
+                ></Card>
               ))}
             </div>
           </div>

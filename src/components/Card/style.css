@@ -4,6 +4,7 @@
   height: 400px;
   width: 250px;
   position: relative;
+  background-image: url("./img/foward.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -14,6 +15,7 @@
   box-shadow: 3px 7px 3px 3px #00000026;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+
 }
 .card:hover {
   transform: scale(1.01);
@@ -55,6 +57,9 @@
 }
 
 @keyframes open-cards {
+  0% {
+    margin: 0 -100px;
+  }
   100% {
     margin: 20px 20px;
   }
