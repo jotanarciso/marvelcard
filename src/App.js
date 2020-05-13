@@ -4,8 +4,11 @@ import { Home } from '@views'
 
 
 function App() {
+
   return (
-    <Home></Home>
+    <>
+      <Home></Home>
+    </>
   );
 }
 

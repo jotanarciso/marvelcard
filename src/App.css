@@ -1,0 +1,14 @@
+#root {
+  background: #951e22;
+  overflow-x: hidden;
+}
+
+/* remove bootstrap gutters */
+.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutter > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}

@@ -1,15 +1,6 @@
 import axios from "axios";
 import ENV from "@environments";
-import crypto from "crypto";
-
-/* Marvel API Config */
-const PRIV_KEY = "b97b275f00c65061c1c548114ece8c741cf8a27f";
-const API_KEY = "dbb258f56cf0e85ba0a3bcf608741b2c";
-const ts = new Date().getTime();
-const hash = crypto
-  .createHash("md5")
-  .update(ts + PRIV_KEY + API_KEY)
-  .digest("hex");
+import { authenticationData } from "@models";
 
 const getUrl = (url) => (url ? `/${url.toString().replace("/", "")}` : null);
 const findRoute = (apiName) =>
@@ -38,15 +29,29 @@ export class BaseService {
         config
       )
     );
-
     this.client.interceptors.response.use(
-      (response) => response,
+      (response) => {
+        return response;
+      },
       (error) => {
         const message = error?.response?.data?.message;
         notifier(
           message ||
             `Não conseguimos conexão com este domínio ${findRoute(apiName)}`
         );
+        return Promise.reject(error);
+      }
+    );
+
+    this.client.interceptors.request.use(
+      (config) => {
+        config.params = {
+          ...config.params,
+          ...authenticationData,
+        };
+        return config;
+      },
+      (error) => {
         return Promise.reject(error);
       }
     );
@@ -57,37 +62,8 @@ export class BaseService {
   }
 
   get(url, config) {
-    return getData(
-      this.client.get(
-        getUrl(url),
-        config
-          ? config
-          : {
-              params: {
-                apikey: API_KEY,
-                ts: ts,
-                hash: hash,
-              },
-            }
-      )
-    );
+    return getData(this.client.get(getUrl(url), config));
   }
-
-  // post(url, data, config) {
-  //   return this.client.post(getUrl(url), data, config);
-  // }
-
-  // put(url, data, config) {
-  //   return this.client.put(getUrl(url), data, config);
-  // }
-
-  // patch(url, data, config) {
-  //   return this.client.patch(getUrl(url), data, config);
-  // }
-
-  // delete(url, config) {
-  //   return this.client.delete(getUrl(url), config);
-  // }
 }
 
 BaseService.enableGlobalErrorHandling = (errorNotifier) => {

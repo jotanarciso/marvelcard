@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Marvel";
+  src: local("Marvel"), url(./fonts/marvel-font.ttf) format("ttf");
+}
+header {
+  display: flex !important;
+  position: absolute;
+  width: 100%;
+}
+header h1 {
+  height: 60px;
+  font-size: 4em;
+  font-family: "Marvel";
+  text-align: center;
+  line-height: 1em;
+  margin-bottom: 0;
+  margin-top: 50px;
+  padding-top: 4px;
+  padding-right: 6px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #951f23;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+header h1:hover {
+  color: #951f23;
+  background: #fff;
+  color: #fff;
+  background: #951f23;
+}

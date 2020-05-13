@@ -1,0 +1,61 @@
+.card {
+  color: #fff;
+  margin: 0 -100px;
+  height: 400px;
+  width: 250px;
+  position: relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1e2639 !important;
+  background-size: cover;
+  border: 10px solid rgba(0, 0, 0, 0.125) !important;
+  padding: 15px;
+  box-shadow: 3px 7px 3px 3px #00000026;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.01);
+}
+.card.open-cards {
+  animation: open-cards 3s;
+  animation-fill-mode: forwards;
+}
+.card h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  padding: 5px;
+  bottom: 20px;
+  left: 0;
+  background-color: #1a2132;
+  border: 2px solid #1a2132;
+  border-radius: 0.25rem;
+}
+.card h3 {
+  font-size: 0.6em;
+  background: #1a2132;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  padding: 5px;
+  margin-block-end: 0;
+}
+.card span.id {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 2px;
+  font-size: 0.9em;
+  background-color: #1a2132;
+  border: 2px solid #1a2132;
+  border-radius: 0.25rem;
+}
+
+@keyframes open-cards {
+  100% {
+    margin: 20px 20px;
+  }
+}

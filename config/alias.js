@@ -5,4 +5,6 @@ module.exports = {
     '@services': `${paths.appSrc}/services`,
     '@views': `${paths.appSrc}/views`,
     '@environments': `${paths.appSrc}/environments`,
+    '@models': `${paths.appSrc}/models`,
+
 }

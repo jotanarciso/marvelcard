@@ -3,8 +3,8 @@ module.exports = {
   data: {
     BACKEND_ROUTES: [
       {
-        route: 'characters',
-        url: 'https://gateway.marvel.com/v1/public/characters'
+        route: 'marvelAPI',
+        url: 'http://private-anon-ccd342e3da-marvel.apiary-mock.com/api/'
       },
     ]
   }
