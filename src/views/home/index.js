@@ -11,8 +11,8 @@ import { NotificationService } from "@services";
 /* View Style */
 import "./styles.css";
 
-const RANDOM_OFFSET = Math.floor(Math.random() * 1493);
-const QTD_CHARACTERS = 3;
+const RANDOM_OFFSET = 0; // Math.floor(Math.random() * 1493);
+const QTD_CHARACTERS = 4;
 
 const Search = (props) => {
   return (
