@@ -4,18 +4,12 @@ export class MarvelService extends BaseService {
     super("marvelAPI");
   }
 
-  get(url, limit, offset) {
+  get(url, nameToSearch, limit, offset) {
     return super.get(url, {
       params: {
+        ...(nameToSearch ? { name: nameToSearch } : {}),
         limit: limit ? limit : "6",
         offset: offset ? offset : "0",
-      },
-    });
-  }
-  getByName(name) {
-    return super.get(null, {
-      params: {
-        name: name,
       },
     });
   }

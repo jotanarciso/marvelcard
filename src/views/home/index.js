@@ -11,8 +11,36 @@ import { NotificationService } from "@services";
 /* View Style */
 import "./styles.css";
 
-const RANDOM_OFFSET = Math.floor(Math.random() * 1493);
+const RANDOM_OFFSET = 0; // Math.floor(Math.random() * 1493);
 const QTD_CHARACTERS = 3;
+
+const Search = (props) => {
+  return (
+    <>
+      <div className="col-md-5 mt-3 mb-3">
+        <div className="input-group" id="search">
+          <input
+            type="text"
+            className="form-control"
+            onChange={props.onChange}
+            onKeyPress={props.onKeyPress}
+            placeholder="Find character"
+          />
+          <div className="input-group-append">
+            <button
+              className="btn text-light font-weight-bold"
+              onClick={props.onClick}
+              type="button"
+            >
+              <span>GO!</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +49,7 @@ export class Home extends React.Component {
     this.state = {
       characters: [],
       isLoading: true,
+      inputValue: false, // character name to search
     };
   }
 
@@ -28,10 +57,29 @@ export class Home extends React.Component {
     this.getCharacters();
   }
 
-  async getCharacters() {
+  handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      this.getCharacters(this.state.inputValue);
+    }
+  };
+
+  onChangeInputSearch = (e) => {
+    this.setState({ inputValue: e.target.value });
+  };
+
+  getCharacterByName = () => {
+    this.getCharacters(this.state.inputValue);
+  };
+
+  async getCharacters(nameToSearch) {
     try {
       await this.charactersService
-        .get("/characters", QTD_CHARACTERS, RANDOM_OFFSET)
+        .get(
+          "/characters",
+          nameToSearch ? nameToSearch : "",
+          QTD_CHARACTERS,
+          RANDOM_OFFSET
+        )
         .then(
           (response) => this.setState({ characters: response.data.results }),
           setTimeout(() => {
@@ -56,8 +104,20 @@ export class Home extends React.Component {
         <section
           id="home"
           className="justify-content-center align-items-center"
-          style={{ display: isLoading ? "none" : "flex" }}>  {/* loading done?? show home  */}
+          style={{
+            display: isLoading
+              ? "none"
+              : "flex" /* loading done?? show home  */,
+          }}
+        >
           <div className="container-fluid">
+            <div className="row flex justify-content-center mb-3">
+              <Search
+                onClick={this.getCharacterByName}
+                onKeyPress={this.handleKeyPress}
+                onChange={this.onChangeInputSearch}
+              ></Search>
+            </div>
             <div className="row no-gutters flex justify-content-center">
               {characters.map((character) => (
                 <Card key={character.id} character={character}></Card>
