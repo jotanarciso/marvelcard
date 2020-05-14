@@ -3,10 +3,16 @@
   width: 100%;
   min-height: 100vh;
 }
+
+#search button {
+  background: #941f23;
+}
+
 #search button:hover {
+  color: #941f23;
   background: #fff;
 }
 
 #search button:hover span {
-  color: #951e22;;
+  color: #951e22;
 }
