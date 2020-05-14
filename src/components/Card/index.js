@@ -11,7 +11,6 @@ const googleImages = async (character) => {
   );
   if (localStorage.getItem(character.name) === null) { // If a character image is not fetched before
     await client.search(character.name + "marvel").then((images) => { // get an image 
-==
       localStorage.setItem(character.name, images[0].url); // and save it in the local storage
     });
   } else { // if the image was previously fetched,

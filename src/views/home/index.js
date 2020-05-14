@@ -85,17 +85,17 @@ export class Home extends React.Component {
         .then(
           (response) =>
             response.data.results.length !== 0 //  if a result is found for the specific character
-              ? this.setState({
-                  characters: response.data.results,
-                  flip: nameToSearch ? false : true, // if the card was fetched flip is false
-                }) /// set character
-              : this.notificationService.error(
-                  `Não foi possível encontrar o personagem! Verifique o nome e tente novamente.` // warns the user
-                ),
+              ? (this.setState({
+                characters: response.data.results,
+                flip: nameToSearch ? false : true, // if the card was fetched flip is false
+              })) /// set character
+              : (this.notificationService.error(
+                `Não foi possível encontrar o personagem! Verifique o nome e tente novamente.` // warns the user
+              )),
           this.state.isLoading &&
-            setTimeout(() => {
-              this.setState({ isLoading: false });
-            }, 4000)
+          setTimeout(() => {
+            this.setState({ isLoading: false });
+          }, 4000)
         );
     } catch (error) {
       this.notificationService.error(
