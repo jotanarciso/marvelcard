@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/marvelcards/static/css/main.d72e6681.chunk.css",
-    "main.js": "/marvelcards/static/js/main.1524b1f5.chunk.js",
-    "main.js.map": "/marvelcards/static/js/main.1524b1f5.chunk.js.map",
-    "runtime-main.js": "/marvelcards/static/js/runtime-main.7df991af.js",
-    "runtime-main.js.map": "/marvelcards/static/js/runtime-main.7df991af.js.map",
-    "static/css/2.de424728.chunk.css": "/marvelcards/static/css/2.de424728.chunk.css",
-    "static/js/2.138b7ea0.chunk.js": "/marvelcards/static/js/2.138b7ea0.chunk.js",
-    "static/js/2.138b7ea0.chunk.js.map": "/marvelcards/static/js/2.138b7ea0.chunk.js.map",
-    "index.html": "/marvelcards/index.html",
-    "precache-manifest.e3380b5f8dca8b9558e6f3cf7ce7b061.js": "/marvelcards/precache-manifest.e3380b5f8dca8b9558e6f3cf7ce7b061.js",
-    "service-worker.js": "/marvelcards/service-worker.js",
-    "static/css/2.de424728.chunk.css.map": "/marvelcards/static/css/2.de424728.chunk.css.map",
-    "static/css/main.d72e6681.chunk.css.map": "/marvelcards/static/css/main.d72e6681.chunk.css.map",
-    "static/js/2.138b7ea0.chunk.js.LICENSE.txt": "/marvelcards/static/js/2.138b7ea0.chunk.js.LICENSE.txt",
-    "static/media/style.css": "/marvelcards/static/media/foward.710391ab.png",
-    "static/media/styles.css": "/marvelcards/static/media/marvel-font.067285b0.ttf"
+    "main.css": "/marvelcard/static/css/main.c9d9ee72.chunk.css",
+    "main.js": "/marvelcard/static/js/main.ede240e6.chunk.js",
+    "main.js.map": "/marvelcard/static/js/main.ede240e6.chunk.js.map",
+    "runtime-main.js": "/marvelcard/static/js/runtime-main.be4e1de3.js",
+    "runtime-main.js.map": "/marvelcard/static/js/runtime-main.be4e1de3.js.map",
+    "static/css/2.de424728.chunk.css": "/marvelcard/static/css/2.de424728.chunk.css",
+    "static/js/2.138b7ea0.chunk.js": "/marvelcard/static/js/2.138b7ea0.chunk.js",
+    "static/js/2.138b7ea0.chunk.js.map": "/marvelcard/static/js/2.138b7ea0.chunk.js.map",
+    "index.html": "/marvelcard/index.html",
+    "precache-manifest.68d6f7e5ac4b4d7cdef56290d9dddee0.js": "/marvelcard/precache-manifest.68d6f7e5ac4b4d7cdef56290d9dddee0.js",
+    "service-worker.js": "/marvelcard/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/marvelcard/static/css/2.de424728.chunk.css.map",
+    "static/css/main.c9d9ee72.chunk.css.map": "/marvelcard/static/css/main.c9d9ee72.chunk.css.map",
+    "static/js/2.138b7ea0.chunk.js.LICENSE.txt": "/marvelcard/static/js/2.138b7ea0.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/marvelcard/static/media/foward.710391ab.png",
+    "static/media/styles.css": "/marvelcard/static/media/marvel-font.067285b0.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.7df991af.js",
+    "static/js/runtime-main.be4e1de3.js",
     "static/css/2.de424728.chunk.css",
     "static/js/2.138b7ea0.chunk.js",
-    "static/css/main.d72e6681.chunk.css",
-    "static/js/main.1524b1f5.chunk.js"
+    "static/css/main.c9d9ee72.chunk.css",
+    "static/js/main.ede240e6.chunk.js"
   ]
 }
