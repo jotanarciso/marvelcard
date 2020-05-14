@@ -11,7 +11,7 @@ const googleImages = async (character) => {
   );
   if (localStorage.getItem(character.name) === null) { // If a character image is not fetched before
     await client.search(character.name + "marvel").then((images) => { // get an image 
-      console.log(images[0]);
+==
       localStorage.setItem(character.name, images[0].url); // and save it in the local storage
     });
   } else { // if the image was previously fetched,
@@ -55,7 +55,6 @@ export class Card extends React.Component {
     if (character) {
       if (this.nameHaveSpecification(character)) {
         // if character name have specification
-        console.log(character);
         if (character.thumbnail.path.includes("image_not_available")) {  // img character thumbnail is not available so get thumbnail from google images
           googleImages(character).then(() => {
             this.setState({ character: character });
