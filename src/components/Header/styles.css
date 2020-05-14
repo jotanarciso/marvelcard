@@ -1,6 +1,14 @@
 @font-face {
-  font-family: "Marvel";
-  src: local("Marvel"), url(./fonts/marvel-font.ttf) format("ttf");
+  font-family: "Marvel-Regular";
+  src: url("./fonts/marvel-font.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/marvel-font.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/marvel-font.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/marvel-font.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/marvel-font.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/marvel-font.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/marvel-font.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
 }
 
 header {
@@ -12,7 +20,7 @@ header {
 header h1 {
   height: 60px;
   font-size: 4em;
-  font-family: "Marvel";
+  font-family: "Marvel-Regular";
   text-align: center;
   line-height: 1em;
   margin-bottom: 0;
