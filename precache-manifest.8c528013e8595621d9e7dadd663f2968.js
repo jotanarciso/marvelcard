@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b820eb9802f9ed872f883708b9b9834",
+    "revision": "16122581759d098c12adddf0fbde79ac",
     "url": "/marvelcard/index.html"
   },
   {
-    "revision": "8674be9f0c80a6eb5766",
+    "revision": "db96d04577d8cc8fe82b",
     "url": "/marvelcard/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "7c84eafa51acd4f45260",
+    "revision": "f6e91e38e3ffc6f05f3f",
     "url": "/marvelcard/static/css/main.c9d9ee72.chunk.css"
   },
   {
-    "revision": "8674be9f0c80a6eb5766",
-    "url": "/marvelcard/static/js/2.138b7ea0.chunk.js"
+    "revision": "db96d04577d8cc8fe82b",
+    "url": "/marvelcard/static/js/2.345d33eb.chunk.js"
   },
   {
     "revision": "801455085fc6f57b23eb009849543052",
-    "url": "/marvelcard/static/js/2.138b7ea0.chunk.js.LICENSE.txt"
+    "url": "/marvelcard/static/js/2.345d33eb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c84eafa51acd4f45260",
-    "url": "/marvelcard/static/js/main.a48c2e94.chunk.js"
+    "revision": "f6e91e38e3ffc6f05f3f",
+    "url": "/marvelcard/static/js/main.f96c738e.chunk.js"
   },
   {
     "revision": "e991a14b9119ee057b02",
