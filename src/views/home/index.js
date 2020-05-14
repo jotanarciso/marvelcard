@@ -140,6 +140,16 @@ export class Home extends React.Component {
               ))}
             </div>
           </div>
+          <div className="footer-copyright text-right py-0">
+            <a
+              href="https://jotanarciso.com/"
+              target="blank"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="jotanarciso.com | desenvolvedor de experiências"
+            >;</a
+            >
+          </div>
         </section>
       </>
     );

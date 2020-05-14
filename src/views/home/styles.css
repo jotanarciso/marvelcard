@@ -16,3 +16,31 @@
 #search button:hover span {
   color: #951e22;
 }
+
+.footer-copyright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.footer-copyright a {
+  color: #fff;
+  font-family: boucherie-block, sans-serif;
+  font-style: normal;
+  font-size: 2.8em;
+  margin: 0 10px 0 3px;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0;
+  -o-transition: all 0.4s ease-in-out 0;
+}
+
+.footer-copyright a:hover {
+  color: #212529;
+  font-family: boucherie-block, sans-serif;
+  font-style: bold;
+}
+
+.footer-copyright span {
+  font-size: 0.8em;
+}
