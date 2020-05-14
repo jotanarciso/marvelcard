@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import MarvelBookAnimationGif from './img/marvel-book-animation.gif'
 
 export const Intro = (props) => {
   const Background = () => {
@@ -8,7 +9,7 @@ export const Intro = (props) => {
         <div className={"overlay fade-out"}></div>
         <img
           alt="marvel book animation"
-          src="https://66.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif"
+          src={MarvelBookAnimationGif}
         ></img>
       </>
     );
