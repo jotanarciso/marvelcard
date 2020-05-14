@@ -7,9 +7,10 @@ export class MarvelService extends BaseService {
   get(url, nameToSearch, limit, offset) {
     return super.get(url, {
       params: {
-        ...(nameToSearch ? { name: nameToSearch } : {}),
-        limit: limit ? limit : "6",
-        offset: offset ? offset : "0",
+        ...(nameToSearch ? { name: nameToSearch } : {
+          limit: limit ? limit : "6",
+          offset: offset ? offset : "0",
+        }),
       },
     });
   }

@@ -20,7 +20,7 @@
 }
 
 #intro .fade-out {
-  animation: fadeColor 3s;
+  animation: fadeColor 5s;
   animation-fill-mode: forwards;
 }
 

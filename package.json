@@ -1,7 +1,12 @@
 {
   "name": "marvel",
+  "homepage": "https://jotanarciso.github.io/marvelcard",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jotanarciso/marvelcard.git"
+  },
   "dependencies": {
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
@@ -77,8 +82,10 @@
     "env:hml": "node ./node_modules/app-json-env-gen/cli.js target=hml output=./src/environments/env.json",
     "env:prd": "node ./node_modules/app-json-env-gen/cli.js target=prd output=./src/environments/env.json",
     "start": "node ./node_modules/app-json-env-gen/cli.js target=local output=./src/environments/env.json && node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "build": "node ./node_modules/app-json-env-gen/cli.js target=local output=./src/environments/env.json && node scripts/build.js",
+    "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -151,5 +158,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
