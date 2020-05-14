@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7f70f1686d9b4e13bf1e60088a83e97",
+    "revision": "8b820eb9802f9ed872f883708b9b9834",
     "url": "/marvelcard/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/marvelcard/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "1077d97685be5f2e16be",
+    "revision": "7c84eafa51acd4f45260",
     "url": "/marvelcard/static/css/main.c9d9ee72.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/marvelcard/static/js/2.138b7ea0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1077d97685be5f2e16be",
-    "url": "/marvelcard/static/js/main.ede240e6.chunk.js"
+    "revision": "7c84eafa51acd4f45260",
+    "url": "/marvelcard/static/js/main.a48c2e94.chunk.js"
   },
   {
     "revision": "e991a14b9119ee057b02",
