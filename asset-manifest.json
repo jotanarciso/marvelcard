@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/marvelcard/static/css/main.9e454a23.chunk.css",
+    "main.css": "/marvelcard/static/css/main.469a81a1.chunk.css",
     "main.js": "/marvelcard/static/js/main.24cce1bf.chunk.js",
     "main.js.map": "/marvelcard/static/js/main.24cce1bf.chunk.js.map",
     "runtime-main.js": "/marvelcard/static/js/runtime-main.be4e1de3.js",
@@ -9,10 +9,10 @@
     "static/js/2.fa0ec6c2.chunk.js": "/marvelcard/static/js/2.fa0ec6c2.chunk.js",
     "static/js/2.fa0ec6c2.chunk.js.map": "/marvelcard/static/js/2.fa0ec6c2.chunk.js.map",
     "index.html": "/marvelcard/index.html",
-    "precache-manifest.59adace9dcacdf8bd0230b196c4559aa.js": "/marvelcard/precache-manifest.59adace9dcacdf8bd0230b196c4559aa.js",
+    "precache-manifest.02ff94d28ee39af411ae41208cb0b776.js": "/marvelcard/precache-manifest.02ff94d28ee39af411ae41208cb0b776.js",
     "service-worker.js": "/marvelcard/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/marvelcard/static/css/2.de424728.chunk.css.map",
-    "static/css/main.9e454a23.chunk.css.map": "/marvelcard/static/css/main.9e454a23.chunk.css.map",
+    "static/css/main.469a81a1.chunk.css.map": "/marvelcard/static/css/main.469a81a1.chunk.css.map",
     "static/js/2.fa0ec6c2.chunk.js.LICENSE.txt": "/marvelcard/static/js/2.fa0ec6c2.chunk.js.LICENSE.txt",
     "static/media/style.css": "/marvelcard/static/media/foward.710391ab.png",
     "static/media/marvel-book-animation.gif": "/marvelcard/static/media/marvel-book-animation.2ad5e4bb.gif",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.be4e1de3.js",
     "static/css/2.de424728.chunk.css",
     "static/js/2.fa0ec6c2.chunk.js",
-    "static/css/main.9e454a23.chunk.css",
+    "static/css/main.469a81a1.chunk.css",
     "static/js/main.24cce1bf.chunk.js"
   ]
 }
